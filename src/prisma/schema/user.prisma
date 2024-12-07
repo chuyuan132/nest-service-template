@@ -1,0 +1,7 @@
+model user {
+  id          Int       @id @default(autoincrement())
+  create_time DateTime? @db.DateTime(0)
+  username    String    @db.VarChar(255)
+  password    String    @db.VarChar(255)
+  is_delete   Boolean   @default(false)
+}
